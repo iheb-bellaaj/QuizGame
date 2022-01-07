@@ -142,6 +142,7 @@ function loadDifficulties() {
 }
 
 async function startQuizClicked() {
+    score = 0;
     await loadQuestions(5);
     console.log(questions);
     startCountdown(15);
