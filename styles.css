@@ -1,0 +1,133 @@
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px lightgrey;
+    width: 50%;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 35px;
+}
+
+.primary-btn {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: #ff9800;
+    padding: 5px;
+    border-width: thin;
+    min-width: 30%;
+    border-radius: 4px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    min-height: 35px;
+    font-size: 17px;
+}
+
+select {
+    margin: 10px 5px;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: #dd8706;
+}
+
+.primary-btn:active {
+    background-color: #bb7204;
+}
+
+.invisible {
+    display: none;
+}
+
+.correct-answer {
+    background-color: rgba(0, 128, 0, 0.473);
+}
+
+.wrong-answer {
+    background-color: rgba(255, 0, 0, 0.473);
+    ;
+}
+
+.timer {
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.long-remaining-time {
+    color: rgba(0, 128, 0, 0.773);
+}
+
+.short-remaining-time {
+    color: rgba(255, 0, 0, 0.773);
+}
+
+.option {
+    margin: 10px 0;
+    border: 0.1px solid #ff9800;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.option.hover-enabled:hover {
+    background-color: #ff990071;
+}
+
+.result-buttons {
+    justify-content: space-between;
+}
+
+.result-main {
+    text-align: center;
+}
+
+@media only screen and (min-width:1400px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .card {
+        width: 80%;
+    }
+}

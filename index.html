@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quizzz</title>
+</head>
+
+<body>
+    <!-- Quizz configuration card -->
+    <div id="config-card" class="card">
+        <header>
+            <h2>
+                Welcome to the Quizz game!
+            </h2>
+        </header>
+
+        <main>
+            <div class="input-container">
+                <label for="categories">Choose a category</label>
+                <select name="categories" id="categories" onchange="onCategoryChanged()">
+
+                </select>
+            </div>
+
+            <div class="input-container">
+                <label for="difficulties">Choose a difficulty</label>
+                <select name="difficulties" id="difficulties" onchange="onDifficultyChanged()">
+                    </select>
+            </div>
+
+        </main>
+        <footer>
+            <button id="start-btn" class="primary-btn" onclick="startQuizClicked()">Start</button>
+        </footer>
+
+    </div>
+
+    <!-- Questions card -->
+    <div id="questions-card" class="card invisible">
+        <header>
+            <h2 id="question-title">
+            </h2>
+            <div class="timer long-remaining-time" id="countdown"></div>
+        </header>
+
+        <main>
+            <div id="answers-list">
+            </div>
+        </main>
+        <footer>
+            <button id="next-btn" class="primary-btn invisible" onclick="nextQuestionClicked()">Next</button>
+        </footer>
+
+    </div>
+
+    <!-- Result card -->
+    <div id="result-card" class="card invisible">
+        <main class="result-main">
+            <h2>You have completed the quiz</h2>
+            <h3 id="score-text"></h3>
+        </main>
+        <footer class="result-buttons">
+            <button id="home-btn" class="primary-btn" onclick="homeClicked()">Home</button>
+            <button id="try-again-btn" class="primary-btn" onclick="startQuizClicked()">Try Again</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
